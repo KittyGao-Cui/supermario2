@@ -42,5 +42,5 @@ class Control():   # 控制类
         self.state_name = None
         self.state = None
         self.name = None
-
+        self.clock = 0.0
 
