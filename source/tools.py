@@ -61,11 +61,11 @@ class Control():   # 控制类
 
     def event_loop(self):   # 事件循环
         for event in pg.event.get():  # 在游戏循环中监听事件
-            if event.type == pg.QUIT:   # 如果事件类型为触发pygame的QUIT事件
+            if event.type == pg.QUIT:   # 如果事件类型为用户按下关闭按钮
                 self.done = True   # 状态结束为真
-            elif event.type == pg.KEYDOWN:
+            elif event.type == pg.KEYDOWN:     # 键盘被按下
                 self.keys = pg.key.get_pressed()   # 获取键盘上所有的按键状态
-            elif event.type == pg.KEYUP:
+            elif event.type == pg.KEYUP:    # 键盘被放开
                 self.keys = pg.key.get_pressed()
 
     def main(self):    # 主函数
